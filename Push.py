@@ -18,11 +18,11 @@ headers = {
 
 class WeChat:
     def __init__(self):
-        self.CORPID = 'ww60ebe29ad01c736d'
-        self.CORPSECRET = '4qFt8CrcPNWlEdMqCyE1M_wywcUW8aMIx--dKA2GNcI'
-        self.AGENTID = '1000004'
-        self.TOUSER = "@all"  # 接收者用户名
-        self.media = "2UnV-xzQ2yK2oxNaEd7fwhPnHTbkDLb6Hc523RyZX7E-KTKTBvyvKhBetg03jwHzX"
+        self.CORPID = '填写自己的企业ID'
+        self.CORPSECRET = '填写自己的应用secret'
+        self.AGENTID = '填写自己的应用程序ID'
+        self.TOUSER = "@all"  # 接收者用户名，也可以选择具体企业用户，比如张三 ，那就填写 ZhangSan（必须是已经加入企业的用户）
+        self.media = "填写图片Media-ID"
 
     def get_access_token(self):
         url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken'
@@ -75,11 +75,11 @@ class WeChat:
             "mpnews":{
 	            "articles": [
 	            {
-	                "title":"早安，敏敏",
+	                "title":"填写标题",
 	                "thumb_media_id":self.media,
-	                "author":"小岩",
+	                "author":"填写作者",
                     "content_source_url": "URL", # 图文消息点击“阅读原文”之后的页面链接
-	                "digest":"元气满满的一天开始啦",
+	                "digest":"填写摘要",
 	                "content":message, # 图文消息的内容，支持html标签，不超过666 K个字节（支持id转译）
 	                },
 	            ]
