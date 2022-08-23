@@ -91,7 +91,6 @@ class WeChat:
         proxies = {'http': 'http://localhost:8080', 'https': 'http://localhost:8080'}
         r = requests.post(send_url, json=send_data, headers=headers)
         print(send_data)
-	
 	print(r.content)
         return r.content
 
